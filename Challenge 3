@@ -1,0 +1,12 @@
+obj= {"a": {"b":{"c":"d"}}}
+key= "a/b/c"
+
+def func (obj, key):
+    value=0
+    key_split= key.split("/")
+    for  i in  range (0, len(key_split)):
+        if key_split[i] in obj.keys():
+            value=obj[key_split[i]]
+            obj= value
+    print(value)
+func(obj, key)
